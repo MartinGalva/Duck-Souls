@@ -9,7 +9,24 @@ public class prueba_1 : MonoBehaviour {
     [SerializeField] private float speed = 5f;
 
     private bool grounded;
+
+    //Climb
+    [SerializeField] private float climbSpeed;
+    private CapsuleCollider2D cCollider;
+    private bool isClimbing;
+    float v;
+    float initialGravity;
+
+
+
+
+    
    
+    void Start ()
+    {
+        cCollider = GetComponent<CapsuleCollider2D>();
+        initialGravity = rb.gravityScale;
+    }
 
     void Update ()
     {
@@ -31,15 +48,49 @@ public class prueba_1 : MonoBehaviour {
             grounded =  false;
         }
         
-        /* fuerza de salto*/if (Input.GetKeyDown(KeyCode.Space) && grounded)
+        /* fuerza de salto*/if (Input.GetKeyDown(KeyCode.Space) && grounded )
         {
             rb.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
         }
     }
+       
+    void FixedUpdate ()
+    {
+        v = Input.GetAxis("Vertical");
+
+        Climb();
+
+
+       
+
+    }
+
 
     public void golpe(){
         vida =  vida -1;
         if(vida == 0) Destroy(gameObject);
     }
+        
+    private void Climb()
+    {
+        if((v != 0 || isClimbing ) && (cCollider.IsTouchingLayers(LayerMask.GetMask("Stairs"))))
+        {
+            Vector2 rateOfClimb = new Vector3(rb.velocity.x, v * climbSpeed);
+            rb.velocity = rateOfClimb;
+            rb.gravityScale = 0;
+            isClimbing = true;
+        }
+        else
+        {
+            rb.gravityScale = initialGravity;
+            isClimbing  =false;
+        }
+
+        if(grounded)
+        {
+            isClimbing = false;
+        }
+    }
+
 
 }
