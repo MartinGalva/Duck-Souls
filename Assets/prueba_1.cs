@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class prueba_1 : MonoBehaviour {
-     public int vida = 1;
+    public int vida = 1;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float JumpForce = 5f;
     [SerializeField] private float speed = 5f;
 
+    //Variables para salto
     private bool grounded;
 
     //Climb
@@ -16,10 +17,6 @@ public class prueba_1 : MonoBehaviour {
     private bool isClimbing;
     float v;
     float initialGravity;
-
-
-
-
     
    
     void Start ()
@@ -35,12 +32,9 @@ public class prueba_1 : MonoBehaviour {
         if(h < 0.0f) transform.localScale = new Vector3(-3.0f, 3.0f, 1.0f);
         else if(h > 0.0f) transform.localScale = new Vector3(3.0f, 3.0f, 1.0f);
         
-        
         rb.transform.Translate(new Vector2(h, 0) * Time.deltaTime * speed);
         
         
-
-
        /* que solo salte una vez*/ Debug.DrawRay(transform.position, Vector3.down * 0.5f, Color.red);
         if(Physics2D.Raycast(transform.position, Vector3.down, 0.5f)){
             grounded = true;
@@ -52,16 +46,10 @@ public class prueba_1 : MonoBehaviour {
         {
             rb.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
         }
-    }
-       
-    void FixedUpdate ()
-    {
+
         v = Input.GetAxis("Vertical");
 
-        Climb();
-
-
-       
+        Climb();      
 
     }
 
@@ -83,7 +71,7 @@ public class prueba_1 : MonoBehaviour {
         else
         {
             rb.gravityScale = initialGravity;
-            isClimbing  =false;
+            isClimbing = false;
         }
 
         if(grounded)
@@ -91,6 +79,4 @@ public class prueba_1 : MonoBehaviour {
             isClimbing = false;
         }
     }
-
-
 }

@@ -687,9 +687,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56743e0f46eada540bdaa6c178464e9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  smooth: 0
-  offset: {x: 9.09, y: 0, z: 0}
   leftLimit: 0
   rightLimit: 9.09
   bottomLimit: 0
@@ -792,7 +789,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &790207529
 Transform:
   m_ObjectHideFlags: 0
@@ -2207,7 +2204,7 @@ MonoBehaviour:
   rb: {fileID: 2145129230}
   JumpForce: 4
   speed: 5
-  climbSpeed: 5
+  climbSpeed: 3
 --- !u!50 &2145129230
 Rigidbody2D:
   serializedVersion: 4
@@ -2366,14 +2363,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2145129228}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: beb0703bb71564d4c8fff3817aca59b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftLimit: 0
-  rightLimit: 9.09
-  bottomLimit: 0
+  leftLimit: -9
+  rightLimit: 9
+  bottomLimit: -5
   topLimit: 0.5
 --- !u!1001 &535221737179627505
 PrefabInstance:
