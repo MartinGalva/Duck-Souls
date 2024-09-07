@@ -18,11 +18,14 @@ public class prueba_1 : MonoBehaviour {
     float v;
     float initialGravity;
     
-   
+    //Animation
+    private Animator animator;
+
     void Start ()
     {
         cCollider = GetComponent<CapsuleCollider2D>();
         initialGravity = rb.gravityScale;
+        animator = GetComponent<Animator>();
     }
 
     void Update ()
@@ -34,7 +37,7 @@ public class prueba_1 : MonoBehaviour {
         
         rb.transform.Translate(new Vector2(h, 0) * Time.deltaTime * speed);
         
-        
+        animator.SetBool("grounded",grounded);
        /* que solo salte una vez*/ Debug.DrawRay(transform.position, Vector3.down * 0.5f, Color.red);
         if(Physics2D.Raycast(transform.position, Vector3.down, 0.5f)){
             grounded = true;
@@ -45,12 +48,15 @@ public class prueba_1 : MonoBehaviour {
         /* fuerza de salto*/if (Input.GetKeyDown(KeyCode.Space) && grounded )
         {
             rb.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
+         
         }
 
         v = Input.GetAxis("Vertical");
 
         Climb();      
 
+        animator.SetFloat("floatX", Mathf.Abs(h)); //Para cambiar a la caminata
+        //animator.SetFloat("velocityY", rb.velocity.y);
     }
 
 

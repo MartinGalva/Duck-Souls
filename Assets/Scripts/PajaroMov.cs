@@ -29,9 +29,6 @@ public class PajaroMov : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
-       
-        
        if(seMueve) {
         transform.Translate(Vector2.right * speed * Time.deltaTime);
 
@@ -51,7 +48,7 @@ public class PajaroMov : MonoBehaviour
 
        
        if(Time.time > tiempoDisparo + 0.20f){
-         shoot();
+         //shoot();
          tiempoDisparo = Time.time;
          
        }
