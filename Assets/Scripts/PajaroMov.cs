@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Tilemaps;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PajaroMov : MonoBehaviour
@@ -75,6 +76,14 @@ public class PajaroMov : MonoBehaviour
         GameObject caca = Instantiate(Caca, transform.position, Quaternion.identity);
         caca.GetComponent<cacaScript>().SetDirection(direction);
     }
+    private void OnTriggerEnter2D(Collider2D collision) {
+        prueba_1 personaje = collision.GetComponent<prueba_1>();
+        PajaroMov pajaro = collision.GetComponent<PajaroMov>();
+
+        if (personaje != null) {
+            personaje.golpe();
+        }
     }
+}
 
     
