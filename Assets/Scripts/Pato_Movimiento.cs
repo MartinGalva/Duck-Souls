@@ -11,6 +11,8 @@ public class prueba_1 : MonoBehaviour {
     //Variables para salto
     private bool grounded;
 
+    private bool alive;
+
     //Climb
     [SerializeField] private float climbSpeed;
     private CapsuleCollider2D cCollider;
@@ -26,6 +28,7 @@ public class prueba_1 : MonoBehaviour {
         cCollider = GetComponent<CapsuleCollider2D>();
         initialGravity = rb.gravityScale;
         animator = GetComponent<Animator>();
+        alive = true;
     }
 
     void Update ()
@@ -44,6 +47,8 @@ public class prueba_1 : MonoBehaviour {
         } else{
             grounded =  false;
         }
+
+        animator.SetBool("alive", alive);
         
         /* fuerza de salto*/if (Input.GetKeyDown(KeyCode.Space) && grounded )
         {
@@ -62,7 +67,10 @@ public class prueba_1 : MonoBehaviour {
 
     public void golpe(){
         vida =  vida -1;
-        if(vida == 0) Destroy(gameObject);
+        if(vida == 0) {
+            alive = false;
+            Destroy(gameObject);
+        }    
     }
         
     private void Climb()
