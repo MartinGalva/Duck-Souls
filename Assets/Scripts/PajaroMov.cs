@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Tilemaps;
+//using UnityEditor.Tilemaps;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -16,7 +16,6 @@ public class PajaroMov : MonoBehaviour
     
     private float tiempoDisparo;
 
-    
     // Start is called before the first frame update
     void Start()
     {
