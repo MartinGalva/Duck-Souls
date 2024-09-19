@@ -5,17 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class Interface : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public int levelNumber;
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
          if (Input.GetKeyDown(KeyCode.R)) {
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene(levelNumber);
         }
         if (Input.GetKeyDown(KeyCode.P)) {
             pauseGame();
