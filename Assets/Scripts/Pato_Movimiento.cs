@@ -23,6 +23,18 @@ public class prueba_1 : MonoBehaviour {
     //Animation
     private Animator animator;
 
+    //Llamar al sound manager
+    SoundManager soundManager;
+
+    //Luz
+    [SerializeField] public GameObject luz;
+
+    void Awake()
+    {
+        soundManager = GameObject.FindGameObjectWithTag("Sound").GetComponent<SoundManager>();
+    }
+
+
     void Start ()
     {
         cCollider = GetComponent<CapsuleCollider2D>();
@@ -53,7 +65,7 @@ public class prueba_1 : MonoBehaviour {
         /* fuerza de salto*/if (Input.GetKeyDown(KeyCode.Space) && grounded )
         {
             rb.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
-         
+            soundManager.PlaySFX(soundManager.jump);
         }
 
         v = Input.GetAxis("Vertical");
@@ -69,7 +81,7 @@ public class prueba_1 : MonoBehaviour {
         vida =  vida -1;
         if(vida == 0) {
             alive = false;
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }    
     }
         

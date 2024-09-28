@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c94203fa7543a1541a49e8dbbaca4348
+guid: 9bb5d14a338644048abd2591934acc24
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: die duck_0
+      name: die duck_1_0
       rect:
         serializedVersion: 2
-        x: 63
-        y: 5151
-        width: 900
-        height: 867
+        x: 5
+        y: 429
+        width: 75
+        height: 73
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d883f0242ea2cef4c91e344077560781
-      internalID: -1809558208
+      spriteID: 1ea5209263be8d243bc09d8dac166bbb
+      internalID: -120250890
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: die duck_1
+      name: die duck_1_1
       rect:
         serializedVersion: 2
-        x: 1599
-        y: 5151
-        width: 900
-        height: 867
+        x: 133
+        y: 429
+        width: 75
+        height: 73
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8e1bb867c29a0d4fa65f4570c02652e
-      internalID: 969090198
+      spriteID: 4d1298808b1e48f42a95f0dcecebea75
+      internalID: 1608570072
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: die duck_2
+      name: die duck_1_2
       rect:
         serializedVersion: 2
-        x: 3135
-        y: 5151
-        width: 900
-        height: 867
+        x: 261
+        y: 429
+        width: 75
+        height: 73
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f1534ad5faf51f4aa40a2f7d0479c31
-      internalID: 1521744081
+      spriteID: 31bf91d6855ab0b4f8139619f120caf9
+      internalID: -1345236637
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: die duck_3
+      name: die duck_1_3
       rect:
         serializedVersion: 2
-        x: 4605
-        y: 5151
-        width: 996
-        height: 834
+        x: 384
+        y: 429
+        width: 83
+        height: 70
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dfeb1c5a50e785d459538da2c1772883
-      internalID: -2013204359
+      spriteID: f8e2cc8968faf4443804ea5126405042
+      internalID: -853380872
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: die duck_4
+      name: die duck_1_4
       rect:
         serializedVersion: 2
         x: 0
-        y: 3678
-        width: 1026
-        height: 867
+        y: 306
+        width: 86
+        height: 73
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6dd8a6caa647b214096f70ac3afad2db
-      internalID: 2050763655
+      spriteID: 33cc915500aec874a822936430a0cda8
+      internalID: 1714804526
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: die duck_5
+      name: die duck_1_5
       rect:
         serializedVersion: 2
-        x: 1533
-        y: 3678
-        width: 1029
-        height: 867
+        x: 128
+        y: 306
+        width: 86
+        height: 73
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,20 +229,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b86505db0b56bd74384d1ad80a5dc052
-      internalID: 58261200
+      spriteID: 9fcc98e6b5e176e428b2fc0acb75c383
+      internalID: -1944732120
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: die duck_6
+      name: die duck_1_6
       rect:
         serializedVersion: 2
-        x: 3069
-        y: 3615
-        width: 996
-        height: 834
+        x: 256
+        y: 301
+        width: 83
+        height: 70
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,20 +250,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 775a63138340fdc47a218eb14985d545
-      internalID: 809135844
+      spriteID: 755d1ae7478a8aa4890be8fb4394013d
+      internalID: 221798203
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: die duck_7
+      name: die duck_1_7
       rect:
         serializedVersion: 2
-        x: 4671
-        y: 3615
-        width: 900
-        height: 867
+        x: 389
+        y: 301
+        width: 75
+        height: 73
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,20 +271,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d89b1fe045911fe4b838aa6abb9f2972
-      internalID: 1655787281
+      spriteID: 967f5ef65850bcd4ebd67b7fcc3b857a
+      internalID: -590196454
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: die duck_8
+      name: die duck_1_8
       rect:
         serializedVersion: 2
-        x: 63
-        y: 2079
-        width: 900
-        height: 867
+        x: 5
+        y: 173
+        width: 75
+        height: 73
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -292,20 +292,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 16cfaef20b7ff5841b2f66f15e5599b5
-      internalID: -1052882803
+      spriteID: 51019f7c2cf612743a3c2c490221542e
+      internalID: -22364892
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: die duck_9
+      name: die duck_1_9
       rect:
         serializedVersion: 2
-        x: 1599
-        y: 2079
-        width: 900
-        height: 867
+        x: 133
+        y: 173
+        width: 75
+        height: 73
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -313,20 +313,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b279d60219fde0348bb74f2172ebf6c1
-      internalID: -1374688223
+      spriteID: 3d5118e4f9648ab489dd4882286d2f7b
+      internalID: 243225938
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: die duck_10
+      name: die duck_1_10
       rect:
         serializedVersion: 2
-        x: 3135
-        y: 2079
-        width: 900
-        height: 867
+        x: 261
+        y: 173
+        width: 75
+        height: 73
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -334,20 +334,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e750f14acbe63947847a8eaad27fa83
-      internalID: -1394754030
+      spriteID: 5489ec098daedf14b84520dfefe13a5b
+      internalID: 558935112
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: die duck_11
+      name: die duck_1_11
       rect:
         serializedVersion: 2
-        x: 4671
-        y: 2079
-        width: 900
-        height: 867
+        x: 389
+        y: 173
+        width: 75
+        height: 73
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -355,20 +355,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96273b110cb434f40924e265a88df8c8
-      internalID: 1618894343
+      spriteID: bb60ee7fe2280f1478d114f1405f3205
+      internalID: 271813590
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: die duck_12
+      name: die duck_1_12
       rect:
         serializedVersion: 2
-        x: 63
-        y: 543
-        width: 900
-        height: 867
+        x: 5
+        y: 45
+        width: 75
+        height: 73
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -376,20 +376,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97c13c09ba03f5f46b71302ddc6f1b66
-      internalID: 1445502413
+      spriteID: af8d6b9c2d8b0ad49b97a38bf1b81757
+      internalID: -1191071974
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: die duck_13
+      name: die duck_1_13
       rect:
         serializedVersion: 2
-        x: 1599
-        y: 543
-        width: 900
-        height: 867
+        x: 133
+        y: 45
+        width: 75
+        height: 73
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -397,8 +397,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c29e235db9a3cc4cae057f80ddefe55
-      internalID: 354755489
+      spriteID: 2a784054f308d7f4489190f0ca2dd740
+      internalID: -833362515
       vertices: []
       indices: 
       edges: []
@@ -414,20 +414,20 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      die duck_0: -1809558208
-      die duck_1: 969090198
-      die duck_10: -1394754030
-      die duck_11: 1618894343
-      die duck_12: 1445502413
-      die duck_13: 354755489
-      die duck_2: 1521744081
-      die duck_3: -2013204359
-      die duck_4: 2050763655
-      die duck_5: 58261200
-      die duck_6: 809135844
-      die duck_7: 1655787281
-      die duck_8: -1052882803
-      die duck_9: -1374688223
+      die duck_1_0: -120250890
+      die duck_1_1: 1608570072
+      die duck_1_10: 558935112
+      die duck_1_11: 271813590
+      die duck_1_12: -1191071974
+      die duck_1_13: -833362515
+      die duck_1_2: -1345236637
+      die duck_1_3: -853380872
+      die duck_1_4: 1714804526
+      die duck_1_5: -1944732120
+      die duck_1_6: 221798203
+      die duck_1_7: -590196454
+      die duck_1_8: -22364892
+      die duck_1_9: 243225938
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
