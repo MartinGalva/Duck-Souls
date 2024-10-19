@@ -41,7 +41,7 @@ public class PointSytem : MonoBehaviour
 
         if (points == 1)
         {
-            coin1.GetComponent<Image>();
+            //coin1.GetComponent<Image>();
         }
     }
 

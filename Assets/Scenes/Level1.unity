@@ -2125,6 +2125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5d674194d3d9d340874fbbb65870ad5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pointsToAdd: 0
 --- !u!58 &758565991
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2661,7 +2662,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a832cfb30b2cdf64a92a20f3697b0750, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevel: 0
+  nextLevel: 1
 --- !u!1 &919124865
 GameObject:
   m_ObjectHideFlags: 0
@@ -6358,6 +6359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5d674194d3d9d340874fbbb65870ad5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pointsToAdd: 0
 --- !u!58 &1959953733
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -6491,6 +6493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5d674194d3d9d340874fbbb65870ad5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pointsToAdd: 0
 --- !u!58 &2001478638
 CircleCollider2D:
   m_ObjectHideFlags: 0
