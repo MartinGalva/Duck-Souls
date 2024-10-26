@@ -214,6 +214,10 @@ MonoBehaviour:
   pointA: {fileID: 6362008}
   pointB: {fileID: 944921114}
   speed: 2
+  limiteIzquierdo: 0
+  limiteDerecho: 0
+  playerTransform: {fileID: 0}
+  chaseDistance: 0
 --- !u!212 &28245318
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1759,6 +1763,10 @@ MonoBehaviour:
   pointA: {fileID: 0}
   pointB: {fileID: 0}
   speed: 1
+  limiteIzquierdo: 0
+  limiteDerecho: 0
+  playerTransform: {fileID: 0}
+  chaseDistance: 0
 --- !u!114 &1378237880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1957,6 +1965,10 @@ MonoBehaviour:
   pointA: {fileID: 0}
   pointB: {fileID: 0}
   speed: 1
+  limiteIzquierdo: 0
+  limiteDerecho: 0
+  playerTransform: {fileID: 0}
+  chaseDistance: 0
 --- !u!114 &1514310372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2602,7 +2614,7 @@ Transform:
   m_GameObject: {fileID: 1798369969}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.37, y: -3.97, z: 0}
+  m_LocalPosition: {x: -6.33, y: -4.11, z: 0}
   m_LocalScale: {x: 2.9999998, y: 2.9999998, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2866,7 +2878,7 @@ Transform:
   m_GameObject: {fileID: 1873024860}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.0688796, y: -3.443, z: -0.049701013}
+  m_LocalPosition: {x: -5.56, y: -3.57, z: -0.049701013}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2885,9 +2897,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bccd02dbff841124cb49e53b4b55d116, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointA: {fileID: 944921114}
-  pointB: {fileID: 6362008}
+  pointA: {fileID: 0}
+  pointB: {fileID: 0}
   speed: 3
+  limiteIzquierdo: -8
+  limiteDerecho: -3
+  playerTransform: {fileID: 1798369976}
+  chaseDistance: 5
 --- !u!50 &1873024864
 Rigidbody2D:
   serializedVersion: 4
@@ -2944,7 +2960,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.090487, y: 0}
