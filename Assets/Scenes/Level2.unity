@@ -454,7 +454,6 @@ MonoBehaviour:
   coin1: {fileID: 38714510}
   coin2: {fileID: 1228998033}
   coin3: {fileID: 1780149214}
-  color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!222 &127681344
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2262,6 +2261,8 @@ MonoBehaviour:
   pointA: {fileID: 1281647966}
   pointB: {fileID: 1391286396}
   speed: 1
+  playerTransform: {fileID: 0}
+  chaseDistance: 0
 --- !u!114 &403284886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8738,6 +8739,8 @@ MonoBehaviour:
   pointA: {fileID: 0}
   pointB: {fileID: 0}
   speed: 1
+  playerTransform: {fileID: 0}
+  chaseDistance: 0
 --- !u!114 &786966806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17549,7 +17552,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a832cfb30b2cdf64a92a20f3697b0750, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevel: 0
+  nextLevel: 2
 --- !u!70 &1477175940
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -23608,6 +23611,8 @@ MonoBehaviour:
   pointA: {fileID: 0}
   pointB: {fileID: 0}
   speed: 1
+  playerTransform: {fileID: 0}
+  chaseDistance: 0
 --- !u!1 &1839517293
 GameObject:
   m_ObjectHideFlags: 0
@@ -24101,6 +24106,8 @@ MonoBehaviour:
   pointA: {fileID: 1281647966}
   pointB: {fileID: 1391286396}
   speed: 1
+  playerTransform: {fileID: 0}
+  chaseDistance: 0
 --- !u!1 &1949557015
 GameObject:
   m_ObjectHideFlags: 0
@@ -25572,6 +25579,7 @@ MonoBehaviour:
   speed: 5
   climbSpeed: 3
   luz: {fileID: 2141177385}
+  facingRight: 0
 --- !u!50 &2145129230
 Rigidbody2D:
   serializedVersion: 4

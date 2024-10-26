@@ -51,10 +51,7 @@ public class PajaroMov : MonoBehaviour
          //shoot();
          tiempoDisparo = Time.time;
          
-       }
-
-       
-       
+       }       
     }
 
     void flip() {

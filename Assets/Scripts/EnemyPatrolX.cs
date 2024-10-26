@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyPatrolX : MonoBehaviour
+
+public class EnemyPatrol : MonoBehaviour
 {
     [SerializeField] private GameObject pointA;
     [SerializeField] private GameObject pointB;
@@ -14,13 +15,13 @@ public class EnemyPatrolX : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        currentPoint = pointA.transform;
+        currentPoint = pointB.transform;
     }
 
     void Update()
     {
         Vector2 point = currentPoint.position - transform.position;
-        if (currentPoint == pointA.transform)
+        if (currentPoint == pointB.transform)
         {
             rb.velocity = new Vector2(speed, 0);
         }
@@ -30,15 +31,27 @@ public class EnemyPatrolX : MonoBehaviour
         }
 
 
-        if (Vector2.Distance(transform.position, currentPoint.position) < 0.5f && currentPoint == pointA.transform)
+        if (Vector2.Distance(rb.transform.position, currentPoint.position) > 0.5f && currentPoint == pointA.transform)
         {
             currentPoint = pointB.transform;
+            //Flip();
         }
 
 
-        if (Vector2.Distance(transform.position, currentPoint.position) < 0.5f && currentPoint == pointB.transform)
+        if (Vector2.Distance(rb.transform.position, currentPoint.position) < 0.5f && currentPoint == pointB.transform)
         {
             currentPoint = pointA.transform;
+            //Flip();
         }
     }
+
+    private void Flip()
+    {
+        Vector3 localScale = transform.localScale;
+        localScale.x *= -1;
+        transform.localScale = localScale;
+    }
+
+    
+
 }

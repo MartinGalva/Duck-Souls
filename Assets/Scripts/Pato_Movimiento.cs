@@ -29,6 +29,12 @@ public class prueba_1 : MonoBehaviour {
     //Luz
     [SerializeField] public GameObject luz;
 
+    //Projectile
+    private bool flippedLeft;
+    public bool facingRight;
+
+    
+
     void Awake()
     {
         soundManager = GameObject.FindGameObjectWithTag("Sound").GetComponent<SoundManager>();
@@ -41,6 +47,7 @@ public class prueba_1 : MonoBehaviour {
         initialGravity = rb.gravityScale;
         animator = GetComponent<Animator>();
         alive = true;
+        facingRight = true;
     }
 
     void Update ()
@@ -76,6 +83,23 @@ public class prueba_1 : MonoBehaviour {
         //animator.SetFloat("velocityY", rb.velocity.y);
     }
 
+    void FixedUpdate () {
+
+        float hor = Input.GetAxis("Horizontal");
+
+        if (hor > 0)
+        {
+            facingRight = true;
+            Flip(true);
+        }
+
+
+        if (hor < 0)
+        {
+            facingRight = false;
+            Flip(false);
+        }
+    }
 
     public void golpe(){
         vida =  vida -1;
@@ -103,6 +127,28 @@ public class prueba_1 : MonoBehaviour {
         if(grounded)
         {
             isClimbing = false;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Enemy Weak Point"))
+        {
+            Destroy(other.transform.parent.gameObject);
+        }
+    }
+
+    void Flip(bool facingRight)
+    {
+        if(flippedLeft && facingRight)
+        {
+            rb.transform.localScale = new Vector3(5,5,1);
+            flippedLeft = false;
+        }
+        if(!flippedLeft && !facingRight)
+        {
+            rb.transform.localScale = new Vector3(-5,5,1);
+            flippedLeft = true;
         }
     }
 }

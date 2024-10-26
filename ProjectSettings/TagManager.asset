@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - Sound
+  - Enemy Weak Point
   layers:
   - Default
   - TransparentFX

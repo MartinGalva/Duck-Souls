@@ -11,9 +11,13 @@ public class PointSytem : MonoBehaviour
     public GameObject coin1;
     public GameObject coin2;
     public GameObject coin3; 
-    public Color color;
+    private Color color;
+    //private Image Imagen;
     private int points = 0;
 
+    void Start() {
+        //Imagen = GetComponent
+    }
 
     public void AddingPoints(int quantity)
     {
