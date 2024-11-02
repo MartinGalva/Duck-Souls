@@ -2261,6 +2261,8 @@ MonoBehaviour:
   pointA: {fileID: 1281647966}
   pointB: {fileID: 1391286396}
   speed: 1
+  limiteIzquierdo: 0
+  limiteDerecho: 0
   playerTransform: {fileID: 0}
   chaseDistance: 0
 --- !u!114 &403284886
@@ -2279,6 +2281,7 @@ MonoBehaviour:
   speed: 2
   limiteIzquierdo: -8
   limiteDerecho: 5
+  dispara: 0
 --- !u!95 &403284887
 Animator:
   serializedVersion: 5
@@ -8739,6 +8742,8 @@ MonoBehaviour:
   pointA: {fileID: 0}
   pointB: {fileID: 0}
   speed: 1
+  limiteIzquierdo: 0
+  limiteDerecho: 0
   playerTransform: {fileID: 0}
   chaseDistance: 0
 --- !u!114 &786966806
@@ -8757,6 +8762,7 @@ MonoBehaviour:
   speed: 0
   limiteIzquierdo: 8
   limiteDerecho: 5
+  dispara: 0
 --- !u!4 &786966807
 Transform:
   m_ObjectHideFlags: 0
@@ -23596,6 +23602,7 @@ MonoBehaviour:
   speed: 0
   limiteIzquierdo: 5
   limiteDerecho: 5
+  dispara: 0
 --- !u!114 &1834222819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23611,6 +23618,8 @@ MonoBehaviour:
   pointA: {fileID: 0}
   pointB: {fileID: 0}
   speed: 1
+  limiteIzquierdo: 0
+  limiteDerecho: 0
   playerTransform: {fileID: 0}
   chaseDistance: 0
 --- !u!1 &1839517293
@@ -24091,6 +24100,7 @@ MonoBehaviour:
   speed: 2
   limiteIzquierdo: -5
   limiteDerecho: 5
+  dispara: 0
 --- !u!114 &1931298128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24106,6 +24116,8 @@ MonoBehaviour:
   pointA: {fileID: 1281647966}
   pointB: {fileID: 1391286396}
   speed: 1
+  limiteIzquierdo: 0
+  limiteDerecho: 0
   playerTransform: {fileID: 0}
   chaseDistance: 0
 --- !u!1 &1949557015

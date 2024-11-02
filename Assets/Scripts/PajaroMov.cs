@@ -11,9 +11,8 @@ public class PajaroMov : MonoBehaviour
     public float speed;
     public float limiteIzquierdo;
     public float limiteDerecho;
+    public bool dispara;
     private bool seMueve =  true;
-
-    
     private float tiempoDisparo;
 
     // Start is called before the first frame update
@@ -22,8 +21,6 @@ public class PajaroMov : MonoBehaviour
         if(transform.localScale.x > 0) {
             flip();
         }
-
-        
     }
 
     // Update is called once per frame
@@ -47,24 +44,19 @@ public class PajaroMov : MonoBehaviour
        }
 
        
-       if(Time.time > tiempoDisparo + 0.20f){
-         //shoot();
-         tiempoDisparo = Time.time;
-         
-       }       
+       if(Time.time > tiempoDisparo + 2f && dispara){
+            tiempoDisparo = Time.time;
+            shoot();
+       }
     }
 
     void flip() {
-
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;
     }
 
     void shoot() {
-
-        Debug.Log("shoot");
-
         Vector3 direction = Vector3.down;
         if(transform.localScale.x  < 0f) direction  = Vector3.down;
         else direction = Vector3.down;

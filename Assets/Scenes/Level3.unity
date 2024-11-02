@@ -1783,6 +1783,7 @@ MonoBehaviour:
   speed: 0
   limiteIzquierdo: 5
   limiteDerecho: 5
+  dispara: 0
 --- !u!1 &1453542765
 GameObject:
   m_ObjectHideFlags: 0
@@ -1985,6 +1986,7 @@ MonoBehaviour:
   speed: 3
   limiteIzquierdo: -5
   limiteDerecho: 5
+  dispara: 1
 --- !u!95 &1514310373
 Animator:
   serializedVersion: 5

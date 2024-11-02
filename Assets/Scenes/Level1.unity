@@ -297,6 +297,10 @@ MonoBehaviour:
   pointA: {fileID: 0}
   pointB: {fileID: 0}
   speed: 1
+  limiteIzquierdo: 0
+  limiteDerecho: 0
+  playerTransform: {fileID: 0}
+  chaseDistance: 0
 --- !u!114 &77293304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -313,6 +317,7 @@ MonoBehaviour:
   speed: 0
   limiteIzquierdo: 5
   limiteDerecho: 5
+  dispara: 0
 --- !u!4 &77293305
 Transform:
   m_ObjectHideFlags: 0
@@ -952,6 +957,10 @@ MonoBehaviour:
   pointA: {fileID: 0}
   pointB: {fileID: 0}
   speed: 1
+  limiteIzquierdo: 0
+  limiteDerecho: 0
+  playerTransform: {fileID: 0}
+  chaseDistance: 0
 --- !u!114 &327143963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -968,6 +977,7 @@ MonoBehaviour:
   speed: 3
   limiteIzquierdo: -5
   limiteDerecho: 5
+  dispara: 0
 --- !u!95 &327143964
 Animator:
   serializedVersion: 5
@@ -2125,6 +2135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5d674194d3d9d340874fbbb65870ad5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  particles: {fileID: 0}
   pointsToAdd: 0
 --- !u!58 &758565991
 CircleCollider2D:
@@ -3019,6 +3030,7 @@ MonoBehaviour:
   speed: 5
   climbSpeed: 3
   luz: {fileID: 0}
+  facingRight: 0
 --- !u!50 &988446550
 Rigidbody2D:
   serializedVersion: 4
@@ -5364,6 +5376,10 @@ MonoBehaviour:
   pointA: {fileID: 0}
   pointB: {fileID: 0}
   speed: 1
+  limiteIzquierdo: 0
+  limiteDerecho: 0
+  playerTransform: {fileID: 0}
+  chaseDistance: 0
 --- !u!114 &1576003941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5380,6 +5396,7 @@ MonoBehaviour:
   speed: 3
   limiteIzquierdo: -5
   limiteDerecho: 5
+  dispara: 0
 --- !u!95 &1576003942
 Animator:
   serializedVersion: 5
@@ -5706,6 +5723,10 @@ MonoBehaviour:
   pointA: {fileID: 0}
   pointB: {fileID: 0}
   speed: 1
+  limiteIzquierdo: 0
+  limiteDerecho: 0
+  playerTransform: {fileID: 0}
+  chaseDistance: 0
 --- !u!114 &1699217013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5722,6 +5743,7 @@ MonoBehaviour:
   speed: 0
   limiteIzquierdo: 5
   limiteDerecho: 5
+  dispara: 0
 --- !u!4 &1699217014
 Transform:
   m_ObjectHideFlags: 0
@@ -6359,6 +6381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5d674194d3d9d340874fbbb65870ad5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  particles: {fileID: 0}
   pointsToAdd: 0
 --- !u!58 &1959953733
 CircleCollider2D:
@@ -6493,6 +6516,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5d674194d3d9d340874fbbb65870ad5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  particles: {fileID: 0}
   pointsToAdd: 0
 --- !u!58 &2001478638
 CircleCollider2D:
