@@ -15,4 +15,13 @@ public class menu : MonoBehaviour
         Debug.Log("Salir");
         Application.Quit();
     }
+    public void Jugar2()
+    {
+        SceneManager.LoadScene(SceneManager. GetActiveScene().buildIndex +2);
+    }
+    public void Jugar3()
+    {
+        SceneManager.LoadScene(SceneManager. GetActiveScene().buildIndex +3);
+    }
+
 }

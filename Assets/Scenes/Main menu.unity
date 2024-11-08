@@ -898,7 +898,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 248409705}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 607420805}
+        m_TargetAssemblyTypeName: menu, Assembly-CSharp
+        m_MethodName: Jugar2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &248409705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1019,7 +1031,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 465326475}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 607420805}
+        m_TargetAssemblyTypeName: menu, Assembly-CSharp
+        m_MethodName: Jugar3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &465326475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1140,7 +1164,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 489613855}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 607420805}
+        m_TargetAssemblyTypeName: menu, Assembly-CSharp
+        m_MethodName: Jugar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &489613855
 MonoBehaviour:
   m_ObjectHideFlags: 0
