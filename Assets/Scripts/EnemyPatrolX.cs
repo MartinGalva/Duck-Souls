@@ -72,6 +72,11 @@ public class EnemyPatrol : MonoBehaviour
             {
                 rb.velocity = new Vector2(speed, rb.velocity.y);  
             }
+
+            if (Vector2.Distance(transform.position, playerTransform.position) > chaseDistance)
+            {
+                isChasing = false;
+            }
         }
         else
         {
@@ -96,7 +101,9 @@ public class EnemyPatrol : MonoBehaviour
             }
 
             
-            if (Vector2.Distance(transform.position, playerTransform.position) < chaseDistance)
+            if (Vector2.Distance(transform.position, playerTransform.position) < chaseDistance 
+            //&& (playerTransform.position.y >= transform.position.y - 1 || playerTransform.position.y <= transform.position.y + 1)
+            )
             {
                 isChasing = true;
             }

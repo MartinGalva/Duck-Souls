@@ -8,7 +8,6 @@ using TMPro;
 public class PointSytem : MonoBehaviour
 {
     public static PointSytem Instance;
-    public TextMeshProUGUI textPoints;
     public GameObject coin1;
     public GameObject coin2;
     public GameObject coin3;
@@ -20,6 +19,7 @@ public class PointSytem : MonoBehaviour
 
 
     void Start() {
+        points = 0;
         imagen1 = coin1.GetComponent<Image>();
         imagen2 = coin2.GetComponent<Image>();
         imagen3 = coin3.GetComponent<Image>();
@@ -40,12 +40,10 @@ public class PointSytem : MonoBehaviour
 
     private void UpdateUI()
     {
-        if (points < 0)
+        if (points == 0)
         {
-            points = 0;
+            alphaCero();
         }
-
-        textPoints.text = "Coins: " + points.ToString();
 
         if (points == 1)
         {
@@ -67,12 +65,19 @@ public class PointSytem : MonoBehaviour
         if(Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
         }
         else
         {
             Destroy(gameObject);
         }
+    }
+
+    public void alphaCero(){
+        Color nuevoColor = imagen1.color;
+        nuevoColor.a = 0f;
+        imagen1.color = nuevoColor;
+        imagen2.color = nuevoColor;
+        imagen3.color = nuevoColor;
     }
 
     public void cambiarAlpha1() {

@@ -8,7 +8,8 @@ public class PauseMenu : MonoBehaviour
 {
     [SerializeField] private GameObject pauseButton;
     [SerializeField] private GameObject pauseMenu;
-   
+
+    
     private bool isPaused = false; // Booleano para pausar y reanudar con un botón
 
 
@@ -55,6 +56,6 @@ public class PauseMenu : MonoBehaviour
 
     public void Quit()
     {
-       // SceneManager.LoadScene(SceneManager.GetActiveScene());
+       SceneManager.LoadScene(0);
     }
 }

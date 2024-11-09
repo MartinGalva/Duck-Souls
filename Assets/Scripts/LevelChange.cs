@@ -10,6 +10,6 @@ public class LevelChange : MonoBehaviour
         prueba_1 personaje = collision.GetComponent<prueba_1>();
         LevelChange casa = collision.GetComponent<LevelChange>();
 
-        SceneManager.LoadScene(nextLevel);
+        SceneManager.LoadScene(nextLevel);   
     }
 }
