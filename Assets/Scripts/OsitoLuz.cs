@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-public class EnemyPatrol : MonoBehaviour
+public class OsitoLuz : MonoBehaviour
 {
-    [SerializeField] private ParticleSystem smokeEffect;
+   [SerializeField] private ParticleSystem smokeEffect;
     [SerializeField] private GameObject pointA;
     [SerializeField] private GameObject pointB;
     private Rigidbody2D rb;
@@ -35,6 +34,7 @@ public class EnemyPatrol : MonoBehaviour
         /*if(transform.localScale.x > 0) {
             Flip();
         }*/
+        smokeEffect.Stop();
     }
 
     void Update()
@@ -87,6 +87,11 @@ public class EnemyPatrol : MonoBehaviour
                 rb.velocity = new Vector2(speed, rb.velocity.y);
                 if (transform.position.x >= limiteDerecho)
                 {
+                   if (!smokeEffect.isPlaying)
+                {
+                    smokeEffect.Play();  // Reproduce el humo cuando llega al límite derecho
+                }
+                    
                     Flip();
                     seMueve = false;  
                 }
@@ -96,6 +101,7 @@ public class EnemyPatrol : MonoBehaviour
                 rb.velocity = new Vector2(-speed, rb.velocity.y);
                 if (transform.position.x <= limiteIzquierdo)
                 {
+                    smokeEffect.Stop();
                     Flip();
                     seMueve = true;  
                 }
@@ -125,8 +131,8 @@ public class EnemyPatrol : MonoBehaviour
         transform.localScale = localScale;
     }
 
-
-
     
 
 }
+
+
