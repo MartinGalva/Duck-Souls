@@ -9,7 +9,6 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private GameObject pauseButton;
     [SerializeField] private GameObject pauseMenu;
 
-    
     private bool isPaused = false; // Booleano para pausar y reanudar con un botón
 
 

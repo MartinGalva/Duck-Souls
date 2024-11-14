@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement; 
 
 public class prueba_1 : MonoBehaviour {
     public int vida = 1;
@@ -104,8 +105,7 @@ public class prueba_1 : MonoBehaviour {
     public void golpe(){
         vida =  vida -1;
         if(vida == 0) {
-            alive = false;
-            //Destroy(gameObject);
+           StartCoroutine(playerDeath());
         }    
     }
         
@@ -150,5 +150,16 @@ public class prueba_1 : MonoBehaviour {
             rb.transform.localScale = new Vector3(-5,5,1);
             flippedLeft = true;
         }
+    }
+
+    IEnumerator playerDeath() {
+        alive = false;
+        speed = 0;
+        JumpForce = 0;
+    
+        yield return new WaitForSeconds(3);
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        //Destroy(gameObject);
     }
 }

@@ -382,6 +382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bccd02dbff841124cb49e53b4b55d116, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  smokeEffect: {fileID: 0}
   pointA: {fileID: 0}
   pointB: {fileID: 0}
   speed: 1
@@ -979,7 +980,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 224647053}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 416c34e30430b6a409210ded49fd580c, type: 3}
@@ -1177,6 +1178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bccd02dbff841124cb49e53b4b55d116, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  smokeEffect: {fileID: 0}
   pointA: {fileID: 0}
   pointB: {fileID: 0}
   speed: 1
@@ -1445,7 +1447,7 @@ MonoBehaviour:
   backgrdSrc: {fileID: 0}
   music: {fileID: 0}
   bckgrd: {fileID: 0}
-  jump: {fileID: 0}
+  jump: {fileID: 8300000, guid: cb77becb8fd0e724bb4ec86597f8336d, type: 3}
 --- !u!4 &432207562
 Transform:
   m_ObjectHideFlags: 0
@@ -16808,6 +16810,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bccd02dbff841124cb49e53b4b55d116, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  smokeEffect: {fileID: 0}
   pointA: {fileID: 0}
   pointB: {fileID: 0}
   speed: 1
@@ -17155,6 +17158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bccd02dbff841124cb49e53b4b55d116, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  smokeEffect: {fileID: 0}
   pointA: {fileID: 0}
   pointB: {fileID: 0}
   speed: 1
