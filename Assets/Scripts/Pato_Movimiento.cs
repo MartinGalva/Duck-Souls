@@ -73,7 +73,6 @@ public class prueba_1 : MonoBehaviour {
         /* fuerza de salto*/if (Input.GetKeyDown(KeyCode.Space) && grounded )
         {
             rb.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
-            soundManager.PlaySFX(soundManager.jump);
         }
 
         v = Input.GetAxis("Vertical");

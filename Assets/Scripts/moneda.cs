@@ -5,15 +5,18 @@ using UnityEngine;
 public class moneda : MonoBehaviour
 {
     [SerializeField] private ParticleSystem particles;
+    [SerializeField] public AudioClip audioCoin;
+    public float volumen = 10f;
     public int pointsToAdd;
+
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Player")) {
-            // Destruye la moneda para simular que fue recogida
+
+            AudioSource.PlayClipAtPoint(audioCoin, transform.position, volumen);
+
             particles.Play();
-            Destroy(gameObject);
             PointSytem.Instance.AddingPoints(pointsToAdd);
+            Destroy(gameObject);
         }
     }
-
-    
 }

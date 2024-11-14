@@ -6,47 +6,32 @@ using UnityEngine;
 public class SoundManager : MonoBehaviour
 {
     //Variable para mantener el manager entre escenas
-    public static SoundManager instance;
+    public static SoundManager Instance;
     //El static permite referenciar a la misma clase, en este caso SoundManager
    
-    [Header("Audio Source")]
-    [SerializeField] AudioSource musicSrc;
-    [SerializeField] AudioSource sfxSrc;
-    [SerializeField] AudioSource backgrdSrc;
+    private AudioSource coinSound;
 
-
-    [Header("Audio Clips")]
-    public AudioClip music;
-    public AudioClip bckgrd;
-    public AudioClip jump;
-
-    void Awake()
+    private void Awake()
     {
         //Código para que la instancia del Sound Manager no se repita por error
-        if (instance == null)
+        if (Instance == null)
         {
-            instance = this;
+            Instance = this;
             DontDestroyOnLoad(gameObject);
         }
         else
         {
             Destroy(gameObject);
         }
+
+        coinSound = GetComponent<AudioSource>();
     }
-   
-    void Start()
-    {
-        musicSrc.clip = music;
-        musicSrc.Play();
-
-
-        backgrdSrc.clip = bckgrd;
-        backgrdSrc.Play();
-    }
-
 
     public void PlaySFX(AudioClip clip)
     {
-        sfxSrc.PlayOneShot(clip);
+        if (clip != null)
+        {
+            coinSound.PlayOneShot(clip);
+        }
     }
 }

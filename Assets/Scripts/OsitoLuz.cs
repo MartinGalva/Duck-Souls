@@ -92,7 +92,7 @@ public class OsitoLuz : MonoBehaviour
                     smokeEffect.Play();  // Reproduce el humo cuando llega al límite derecho
                 }
                     
-                    Flip();
+                    //Flip();
                     seMueve = false;  
                 }
             }
@@ -102,7 +102,7 @@ public class OsitoLuz : MonoBehaviour
                 if (transform.position.x <= limiteIzquierdo)
                 {
                     smokeEffect.Stop();
-                    Flip();
+                    //Flip();
                     seMueve = true;  
                 }
             }
