@@ -109,13 +109,7 @@ public class EnemyPatrol : MonoBehaviour
                 isChasing = true;
             }
         }
-
-
-      
-       
-        
     }
-
 
 
     private void Flip()
@@ -125,8 +119,13 @@ public class EnemyPatrol : MonoBehaviour
         transform.localScale = localScale;
     }
 
+    /*private void OnTriggerEnter2D(Collider2D collision) {
+        prueba_1 personaje = collision.GetComponent<prueba_1>();
+        EnemyPatrol enemigo = collision.GetComponent<EnemyPatrol>();
 
-
-    
-
+        if (personaje != null) {
+            personaje.golpe();
+        }
+    } 
+    */
 }

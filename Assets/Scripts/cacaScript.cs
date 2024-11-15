@@ -19,7 +19,6 @@ public class cacaScript : MonoBehaviour
 
         Rigidbody2D.velocity = Direction * Speed;
 
-        
     }
 
     public void SetDirection(Vector2 direction) {
@@ -30,6 +29,15 @@ public class cacaScript : MonoBehaviour
     public void destroyCaca(){
 
         Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision) {
+        prueba_1 personaje = collision.GetComponent<prueba_1>();
+        cacaScript caca = collision.GetComponent<cacaScript>();
+
+        if (personaje != null) {
+            personaje.golpe();
+        }
     }
 
     // Update is called once per frame

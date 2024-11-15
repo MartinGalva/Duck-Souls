@@ -135,6 +135,10 @@ public class prueba_1 : MonoBehaviour {
         {
             Destroy(other.transform.parent.gameObject);
         }
+        if (other.CompareTag("Enemy") || other.CompareTag("Vacio"))
+        {
+            StartCoroutine(playerDeath());
+        }
     }
 
     void Flip(bool facingRight)
@@ -159,6 +163,5 @@ public class prueba_1 : MonoBehaviour {
         yield return new WaitForSeconds(3);
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        //Destroy(gameObject);
     }
 }

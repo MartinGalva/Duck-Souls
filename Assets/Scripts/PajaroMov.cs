@@ -44,7 +44,7 @@ public class PajaroMov : MonoBehaviour
        }
 
        
-       if(Time.time > tiempoDisparo + 2f && dispara){
+       if(Time.time > tiempoDisparo + 2.5f && dispara){
             tiempoDisparo = Time.time;
             shoot();
        }
