@@ -55,6 +55,8 @@ public class PauseMenu : MonoBehaviour
 
     public void Quit()
     {
-       SceneManager.LoadScene(0);
+        isPaused = false; // No es necesario ponerlo si no vamos a pausar con botón
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(0);
     }
 }

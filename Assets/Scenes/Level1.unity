@@ -1952,6 +1952,7 @@ GameObject:
   - component: {fileID: 559308171}
   - component: {fileID: 559308170}
   - component: {fileID: 559308169}
+  - component: {fileID: 559308173}
   m_Layer: 5
   m_Name: PauseButton
   m_TagString: Untagged
@@ -2068,11 +2069,25 @@ RectTransform:
   - {fileID: 2018458971}
   m_Father: {fileID: 1515353424}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1800, y: -15}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -70, y: -15}
   m_SizeDelta: {x: 50, y: 50}
-  m_Pivot: {x: 0, y: 1}
+  m_Pivot: {x: 1, y: 1}
+--- !u!114 &559308173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559308168}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8258cf2bc89e9604a95f4557b814baea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseButton: {fileID: 559308168}
+  pauseMenu: {fileID: 2107601308}
 --- !u!1 &643622759
 GameObject:
   m_ObjectHideFlags: 0
@@ -4627,7 +4642,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.03948593, y: -0.04065895}
+  m_Offset: {x: -0.002508372, y: -0.04065895}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -4638,7 +4653,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2074969, y: 1.3271408}
+  m_Size: {x: 1.2914855, y: 1.3271408}
   m_EdgeRadius: 0
 --- !u!50 &1057549589
 Rigidbody2D:
@@ -17128,7 +17143,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.03948593, y: -0.04065895}
+  m_Offset: {x: -0.0059265494, y: -0.04065895}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -17139,7 +17154,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2074969, y: 1.3271408}
+  m_Size: {x: 1.2983218, y: 1.3271408}
   m_EdgeRadius: 0
 --- !u!50 &1603068257
 Rigidbody2D:

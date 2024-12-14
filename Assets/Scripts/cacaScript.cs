@@ -11,8 +11,8 @@ public class cacaScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       Rigidbody2D = GetComponent<Rigidbody2D>();
-
+        Rigidbody2D = GetComponent<Rigidbody2D>();
+        StartCoroutine(SelfDestruct());
     }
 
     void FixedUpdate() {
@@ -38,8 +38,11 @@ public class cacaScript : MonoBehaviour
         if (personaje != null) {
             personaje.golpe();
         }
-    }
+    }   
 
-    // Update is called once per frame
-    
+    IEnumerator SelfDestruct()
+    {
+        yield return new WaitForSeconds(4f);
+        Destroy(gameObject);
+    } 
 }

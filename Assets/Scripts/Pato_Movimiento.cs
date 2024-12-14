@@ -33,7 +33,6 @@ public class prueba_1 : MonoBehaviour {
     //Projectile
     private bool flippedLeft;
     public bool facingRight;
-
     
 
     void Awake()
@@ -62,7 +61,7 @@ public class prueba_1 : MonoBehaviour {
         
         animator.SetBool("grounded",grounded);
        /* que solo salte una vez*/ Debug.DrawRay(transform.position, Vector3.down * 0.5f, Color.red);
-        if(Physics2D.Raycast(transform.position, Vector3.down, 0.5f)){
+        if(Physics2D.Raycast(transform.position, Vector3.down, 0.75f)){
             grounded = true;
         } else{
             grounded =  false;
