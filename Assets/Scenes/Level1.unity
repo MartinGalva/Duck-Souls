@@ -4359,6 +4359,8 @@ MonoBehaviour:
   rb: {fileID: 988446550}
   JumpForce: 5
   speed: 5
+  audioJump: {fileID: 8300000, guid: cb77becb8fd0e724bb4ec86597f8336d, type: 3}
+  audioHit: {fileID: 8300000, guid: 4885b807d2182c44687efa6547e495af, type: 3}
   climbSpeed: 3
   luz: {fileID: 0}
   facingRight: 0

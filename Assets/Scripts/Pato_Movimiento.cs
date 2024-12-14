@@ -8,6 +8,8 @@ public class prueba_1 : MonoBehaviour {
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float JumpForce = 5f;
     [SerializeField] private float speed = 5f;
+    [SerializeField] public AudioClip audioJump;
+    [SerializeField] public AudioClip audioHit;
 
     //Variables para salto
     private bool grounded;
@@ -71,6 +73,7 @@ public class prueba_1 : MonoBehaviour {
         
         /* fuerza de salto*/if (Input.GetKeyDown(KeyCode.Space) && grounded )
         {
+            AudioSource.PlayClipAtPoint(audioJump,transform.position);
             rb.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
         }
 
@@ -155,6 +158,8 @@ public class prueba_1 : MonoBehaviour {
     }
 
     IEnumerator playerDeath() {
+        AudioSource.PlayClipAtPoint(audioHit, transform.position);
+
         alive = false;
         speed = 0;
         JumpForce = 0;
