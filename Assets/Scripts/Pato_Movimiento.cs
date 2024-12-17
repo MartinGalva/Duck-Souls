@@ -36,44 +36,54 @@ public class prueba_1 : MonoBehaviour {
     private bool flippedLeft;
     public bool facingRight;
     
+    private SpriteRenderer spriteRenderer;
 
     void Awake()
     {
         soundManager = GameObject.FindGameObjectWithTag("Sound").GetComponent<SoundManager>();
     }
 
-
     void Start ()
     {
         cCollider = GetComponent<CapsuleCollider2D>();
         initialGravity = rb.gravityScale;
         animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         alive = true;
         facingRight = true;
     }
 
     void Update ()
     {
-        float h = Input.GetAxis("Horizontal");
+         float h = Input.GetAxis("Horizontal");
 
-        if(h < 0.0f) transform.localScale = new Vector3(-3.0f, 3.0f, 1.0f);
-        else if(h > 0.0f) transform.localScale = new Vector3(3.0f, 3.0f, 1.0f);
-        
+        // Voltear usando FlipX
+        if (h > 0)
+        {
+            facingRight = true;
+            spriteRenderer.flipX = false; // Mirando a la derecha
+        }
+        else if (h < 0)
+        {
+            facingRight = false;
+            spriteRenderer.flipX = true; // Mirando a la izquierda
+        }
+
         rb.transform.Translate(new Vector2(h, 0) * Time.deltaTime * speed);
         
-        animator.SetBool("grounded",grounded);
-       /* que solo salte una vez*/ Debug.DrawRay(transform.position, Vector3.down * 0.5f, Color.red);
-        if(Physics2D.Raycast(transform.position, Vector3.down, 0.75f)){
+        animator.SetBool("grounded", grounded);
+        Debug.DrawRay(transform.position, Vector3.down * 0.5f, Color.red);
+        if (Physics2D.Raycast(transform.position, Vector3.down, 0.75f)){
             grounded = true;
-        } else{
-            grounded =  false;
+        } else {
+            grounded = false;
         }
 
         animator.SetBool("alive", alive);
-        
-        /* fuerza de salto*/if (Input.GetKeyDown(KeyCode.Space) && grounded )
+
+        if (Input.GetKeyDown(KeyCode.Space) && grounded)
         {
-            AudioSource.PlayClipAtPoint(audioJump,transform.position);
+            AudioSource.PlayClipAtPoint(audioJump, transform.position);
             rb.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
         }
 
@@ -81,8 +91,7 @@ public class prueba_1 : MonoBehaviour {
 
         Climb();      
 
-        animator.SetFloat("floatX", Mathf.Abs(h)); //Para cambiar a la caminata
-        //animator.SetFloat("velocityY", rb.velocity.y);
+        animator.SetFloat("floatX", Mathf.Abs(h));
     }
 
     void FixedUpdate () {
@@ -94,7 +103,6 @@ public class prueba_1 : MonoBehaviour {
             facingRight = true;
             Flip(true);
         }
-
 
         if (hor < 0)
         {
@@ -145,16 +153,7 @@ public class prueba_1 : MonoBehaviour {
 
     void Flip(bool facingRight)
     {
-        if(flippedLeft && facingRight)
-        {
-            rb.transform.localScale = new Vector3(5,5,1);
-            flippedLeft = false;
-        }
-        if(!flippedLeft && !facingRight)
-        {
-            rb.transform.localScale = new Vector3(-5,5,1);
-            flippedLeft = true;
-        }
+        spriteRenderer.flipX = !facingRight;
     }
 
     IEnumerator playerDeath() {
@@ -168,4 +167,5 @@ public class prueba_1 : MonoBehaviour {
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
 }
